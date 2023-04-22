@@ -23,7 +23,7 @@ spec:
           resources: {}
           readinessProbe: # Garante que aplicação receba tráfego enquanto estiver health. Neste exemplo o tráfego será na porta 80
             initialDelaySeconds: 5 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
-            successThreshold: 10 # Quantas vezes ele precisa checar se o container está health. Neste caso 10 irá fazer 10 checagens
+            successThreshold: 1 # Quantas vezes ele precisa checar se o container está health. Neste caso 10 irá fazer 10 checagens
             periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
             tcpSocket:
               port: 80
