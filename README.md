@@ -2,7 +2,7 @@
 
 Deploy do Nginx em AKS usando ArgoCD.
 
-Este yaml possui as configurações:
+Este yaml possui as seguintes configurações:
 
 - readinessProbe quando configurado, garante que aplicação receba tráfego enquanto estiver saudável.
 - livenessProbe quando configurado, checa se a aplicação está saudável.
