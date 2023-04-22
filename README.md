@@ -10,5 +10,3 @@ Este yaml possui as seguintes configurações:
 este configMap para várias aplicações sem precisar está colocando na mesma o valor literal dela. Neste exemplo temos um objeto configmap com meus dados e nos pods criados a partir do deploy site nginx é possível ver estes dados com através do comando kubectl exec -it **nome-do-pod** -- env
 
 
-
-![ArgoCD.png](/home/leopoldo/Pictures)
