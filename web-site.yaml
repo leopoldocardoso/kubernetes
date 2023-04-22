@@ -20,33 +20,23 @@ spec:
       containers:
         - name: nginx
           image: nginx
-          ports:
-            - containerPort: 80
-          livenessProbe:
-            exec:
-              command:
-              - curl
-              - -f
-              - http://localhost:80/
-            initialDelaySeconds: 10
-            periodSeconds: 10
-            successThreshold: 1
-            failureThreshold: 3
-            timeoutSeconds: 5
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 10
-            successThreshold: 1
-            failureThreshold: 3
-            timeoutSeconds: 5
-          startupProbe:
+          resources: {}
+          readinessProbe: # Garante que aplicação receba tráfego enquanto estiver health. Neste exemplo o tráfego será na porta 80
+            initialDelaySeconds: 5 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
+            successThreshold: 10 # Quantas vezes ele precisa checar se o container está health. Neste caso 10 irá fazer 10 checagens
+            periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
             tcpSocket:
               port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 10
-            successThreshold: 1
-            failureThreshold: 3
-            timeoutSeconds: 5
+
+          livenessProbe: # Usado para checar e garantir que a aplicação esteja sempre saudável
+            initialDelaySeconds: 10 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
+            periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
+            successThreshold: 1 # Quantas vezes ele precisa checar se o container está health. Neste caso 1 vez
+            failureThreshold: 3 # Quantas vezes ele precisa checar se o container está health. Neste caso 3 vezes
+            httpGet: # Garante que o / está respodendo
+              path: /
+              port: 80
+            #exec:
+             # command:
+              #  - curl
+              #  - http://localhost:80/
