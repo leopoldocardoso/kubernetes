@@ -28,7 +28,7 @@ spec:
             tcpSocket:
               port: 80
 
-          livenessProbe: # Usado para checar e garantir que a aplicação esteja sempre saudável
+          livenessProbe: # Usado para checar e garantir se a aplicação está saudável
             initialDelaySeconds: 10 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
             periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
             successThreshold: 1 # Quantas vezes ele precisa checar se o container está health. Neste caso 1 vez
