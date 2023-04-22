@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dados-sre
+data:
+  nome: "Leopoldo"
+  sobrenome: "Cardoso"
+  e-mail: "leopoldo.cardoso@lpcinfo.com.br"
