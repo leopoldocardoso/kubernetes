@@ -8,7 +8,7 @@ metadata:
     app: site-nginx
     environment: dev
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: site-nginx
