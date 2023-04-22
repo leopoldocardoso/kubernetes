@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dados-sre
+  name: env-dados-sre
 data:
   nome: "Leopoldo"
   sobrenome: "Cardoso"

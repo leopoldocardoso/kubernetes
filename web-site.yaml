@@ -27,17 +27,17 @@ spec:
             - name: Env-Nome
               valueFrom:
                 configMapKeyRef:
-                  name: dados-sre
+                  name: env-dados-sre
                   key: nome
             - name: Env-Sobrenome
               valueFrom:
                 configMapKeyRef:
-                  name: dados-sre
+                  name: env-dados-sre
                   key: sobrenome
             - name: Env-Email
               valueFrom:
                 configMapKeyRef:
-                  name: dados-sre
+                  name: env-dados-sre
                   key: e-mail
           readinessProbe: # Garante que aplicação receba tráfego enquanto estiver saudável. Neste exemplo o tráfego será na porta 80
             initialDelaySeconds: 5 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
