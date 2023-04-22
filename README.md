@@ -1,6 +1,6 @@
 # kubernetes com ArgoCD
 
-Deploy de um container Nginx em AKS usando ArgoCD.
+Deploy do Nginx em AKS usando ArgoCD.
 
 Este yaml possui as configurações:
 
