@@ -1,10 +1,10 @@
 # kubernetes com ArgoCD
 
-Deploy do Nginx em AKS usando ArgoCD.
+Deploy do Nginx em AKS usando ArgoCD. As configurações do Yaml tem como base o curso CKA da Proevolua
 
 Este yaml possui as seguintes configurações:
 
-- labels: Utilizado para etiquetar o deploy ou o pod
+- labels: Utilizado para especificar identificação de objetos que são relevantes para o usuário.
 
 - readinessProbe: Quando configurado, garante que aplicação receba tráfego enquanto estiver saudável.
 
@@ -15,4 +15,4 @@ este configMap para várias aplicações sem precisar está colocando na mesma o
 
 - Secrets: Objeto que contém uma pequena quantidade informação sensível, como senhas, tokens ou chaves.
 
-- Metrics: Objeto que limita uso de cpu e memória da sua aplicação no kubernetes.
+- LimitRange: Objeto que limita uso de cpu e memória da sua aplicação no kubernetes.
