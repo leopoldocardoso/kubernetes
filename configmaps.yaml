@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: env-dados-sre
 data:
-  nome: "Leopoldo"
-  sobrenome: "Peixoto Cardoso"
-  e-mail: "leopoldo.cardoso@lpcinfo.com.br"
+  nome: "NOME"
+  sobrenome: "SOBRENOME"
+  e-mail: "seu-mail@seuprovedor.com.br"
