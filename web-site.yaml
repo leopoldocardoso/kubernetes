@@ -22,7 +22,13 @@ spec:
       containers:
         - name: nginx
           image: nginx
-          resources: {}
+          resources:
+            requests:
+              memory: 250Mi
+              cpu: "0.1"
+            limits:
+              memory: 800Mi
+              cpu: "1"
           env:
             - name: Env-Nome
               valueFrom:
