@@ -10,7 +10,7 @@ Este yaml possui as seguintes configurações:
 
 - livenessProbe: Quando configurado, checa se a aplicação está saudável.
 
-- ConfigMaps: Utilizado para passar variáveis em uma aplicação. Sua utilização é bastante útil, já que uma vez que o tipo configmaps esteja com as variáveis necessárias, posso utilizar este configMap para várias aplicações sem precisar está colocando na mesma o valor literal dela. 
+- ConfigMaps: Utilizado para passar variáveis em uma aplicação. Sua utilização é bastante útil, já que uma vez que o tipo configmaps esteja com as variáveis necessárias, posso utilizar este configMap para várias aplicações sem precisar colocar em cada uma das aplicações as varivaeis.
 Neste exemplo temos um objeto configmap com dados do responsável pela aplicação e nos pods criados a partir do deploy site nginx é possível ver estes dados com através do comando kubectl exec -it **nome-do-pod** -- env.
 
 - Secrets: Objeto que contém uma pequena quantidade informação sensível, como senhas, tokens ou chaves.
