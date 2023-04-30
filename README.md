@@ -1,4 +1,4 @@
-# Kubernetes com ArgoCD
+# kubernetes com ArgoCD
 
 Deploy do Nginx em AKS usando ArgoCD. As configurações do Yaml tem como base o curso CKA da Proevolua.
 
@@ -16,3 +16,8 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
 - Secrets: Objeto que contém uma pequena quantidade informação sensível, como senhas, tokens ou chaves.
 
 - LimitRange: Objeto que limita uso de cpu e memória da sua aplicação no kubernetes.
+
+- Persistent Volumes (PV): Montagem de diretórios para armazenamento persistente de informações. Este diretório é criado no cluster. A utilização de Persistent Volume é muito importante para que não perdermos as informações caso haja algum problema com o nosso pod.
+
+- Persistent Volumes Claim (PVC): São pequenas partes dentro do PV. Após criação do PV e PVC podemos associá-los ao pod.
+# Obs: Não é aconselhado em ambiente de produção, já que se perder o cluster, a informação também é perdida. Em produção é aconselhável usar um Storage no Azure ou S3 na AWS.
