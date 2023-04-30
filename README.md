@@ -1,4 +1,4 @@
-# kubernetes com ArgoCD
+# Kubernetes com ArgoCD
 
 Deploy do Nginx em AKS usando ArgoCD. As configurações do Yaml tem como base o curso CKA da Proevolua.
 
