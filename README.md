@@ -20,4 +20,5 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
 - Persistent Volumes (PV): Montagem de diretórios para armazenamento persistente de informações. Este diretório é criado no cluster. A utilização de Persistent Volume é muito importante para que não perdermos as informações caso haja algum problema com o nosso pod.
 
 - Persistent Volumes Claim (PVC): São pequenas partes dentro do PV. Após criação do PV e PVC podemos associá-los ao pod.
+ 
  Obs: Não é aconselhado em ambiente de produção, já que se perder o cluster, a informação também é perdida. Em produção é aconselhável usar um Storage no Azure ou S3 na AWS.
