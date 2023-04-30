@@ -1,1 +1,4 @@
 taint.yml
+pv.yaml
+pvclaim.yaml
+volume-emptyDir.yaml
