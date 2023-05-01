@@ -23,3 +23,4 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
 
 
 
+![image](https://user-images.githubusercontent.com/89399291/235388676-17322405-5d49-4f7d-9a08-7e13292bf92e.png)
