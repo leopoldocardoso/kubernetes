@@ -19,6 +19,10 @@ spec:
         app: site-nginx
         environment: dev
     spec:
+      volumes:
+        - name: pv-volume
+          persistentVolumeClaim:
+            claimName: pv-volume-claim
       containers:
         - name: nginx
           image: nginx
