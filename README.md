@@ -22,4 +22,4 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
 - Persistent Volumes Claim (PVC): São pequenas partes dentro do PV. Após criação do PV e PVC podemos associá-los ao pod.
 
 
-![image](https://user-images.githubusercontent.com/89399291/235388676-17322405-5d49-4f7d-9a08-7e13292bf92e.png)
+
