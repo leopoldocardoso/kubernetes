@@ -7,14 +7,12 @@ metadata:
   labels:
     app: site-nginx
     environment: dev
-    #run: svc-site-nginx
+    run: svc-site-nginx
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
-      app: site-nginx
-      environment: dev
-      #run: svc-site-nginx
+      run: svc-site-nginx
   template:
     metadata:
       labels:
