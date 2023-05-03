@@ -4,8 +4,9 @@ metadata:
   name: my-service-nginx
   spec:
     selector:
-      run: svc-site-nginx
-    ports:
-      - protocol: TCP
-        port: 80
-        targetPort: 80
+      app: site-nginx
+      environment: dev
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
