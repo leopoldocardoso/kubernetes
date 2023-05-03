@@ -5,18 +5,18 @@ kind: Deployment
 metadata:
   name: site-nginx
   labels:
-    app: site-nginx
+    run: site-nginx
     environment: dev
-    run: svc-site-nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: svc-site-nginx
+      run: site-nginx
+      environment: dev
   template:
     metadata:
       labels:
-        app: site-nginx
+        run: site-nginx
         environment: dev
     spec:
       volumes:
