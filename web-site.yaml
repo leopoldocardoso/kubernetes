@@ -66,14 +66,3 @@ spec:
              command:
               - curl
               - http://localhost:80/
-          env:
-          - name: Secret-User
-            valueFrom:
-              secretKeyRef:
-                name: mypassword
-                key: user
-          - name: Secret-Pass
-            valueFrom:
-              secretKeyRef:
-                name: mypassword
-                key: pass
