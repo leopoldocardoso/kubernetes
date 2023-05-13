@@ -66,7 +66,7 @@ spec:
              command:
               - curl
               - http://localhost:80/
-          env:
+          env-secret:
           - name: Secret-User
             valueFrom:
               secretKeyRef:
