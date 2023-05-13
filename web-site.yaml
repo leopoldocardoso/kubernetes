@@ -8,7 +8,7 @@ metadata:
     run: site-nginx
     environment: dev
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       run: site-nginx
@@ -66,14 +66,14 @@ spec:
              command:
               - curl
               - http://localhost:80/
-          secret:
-          - name: Secret-User
-            valueFrom:
-              secretKeyRef:
-                name: mypassword
-                key: user
-          - name: Secret-Pass
-            valueFrom:
-              secretKeyRef:
-                name: mypassword
-                key: pass
+          # secret:
+          # - name: Secret-User
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: mypassword
+          #       key: user
+          # - name: Secret-Pass
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: mypassword
+          #       key: pass
