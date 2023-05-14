@@ -14,9 +14,14 @@ spec:
       labels:
         app: nginx
     spec:
+      volumes:
+        - name: pv-01
       containers:
       - name: site-nginx
         image: nginx
+        volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: pv-01
         ports:
         - containerPort: 80
         resources:
