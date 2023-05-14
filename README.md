@@ -22,3 +22,5 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
 - Rolling Update: Estratégia de update dos pods.
     - maxSurge: Quantos PODs serão atualizados
     - maxUnavailable: Quantos PODs ficarão indisponíveis enquanto ocorre atualização.
+
+![image](https://github.com/leopoldocardoso/kubernetes/assets/89399291/44436730-b221-4fe9-b4cf-d53c669251b8)
