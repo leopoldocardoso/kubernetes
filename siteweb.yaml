@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-nginx
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: site-nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: 250Mi
+            cpu: "0.1"
+          limits:
+            memory: 800Mi
+            cpu: "0.8"
+        env:
+        - name: Env-Nome
+          valueFrom:
+            configMapKeyRef:
+              name: env-dados-sre
+              key: nome
+        - name: Env-Sobrenome
+          valueFrom:
+            configMapKeyRef:
+              name: env-dados-sre
+              key: sobrenome
+        - name: Env-Email
+          valueFrom:
+            configMapKeyRef:
+              name: env-dados-sre
+              key: e-mail
+        readinessProbe: # Garante que aplicação receba tráfego enquanto estiver saudável. Neste exemplo o tráfego será na porta 80
+           initialDelaySeconds: 5 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
+           successThreshold: 1 # Quantas vezes ele precisa checar se o container está health. Neste caso 10 irá fazer 10 checagens
+           periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
+           tcpSocket:
+            port: 80
+
+        livenessProbe: # Checar se a aplicação está saudável. Neste exemplo a checagem e executando comando curl
+          initialDelaySeconds: 10 # Checagem após o start de container. Neste caso 5 segundos, porém o padrão é 0
+          periodSeconds: 5 # De quanto em quanto tempo ele checa se o container está health. Neste caso a cada 5 segundos
+          successThreshold: 1 # Quantas vezes ele precisa checar se o container está health. Neste caso 1 vez
+          failureThreshold: 3 # Quantas vezes ele precisa checar se o container está health. Neste caso 3 vezes
+          exec:
+           command:
+            - curl
+            - http://localhost:80/
