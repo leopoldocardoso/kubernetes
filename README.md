@@ -24,5 +24,6 @@ Neste exemplo temos um objeto configmap com dados do responsável pela aplicaç�
     - maxUnavailable: Quantos PODs ficarão indisponíveis enquanto ocorre atualização.
 
 
-![image](https://github.com/leopoldocardoso/kubernetes/assets/89399291/9d333ed4-5a8c-48fa-b11a-2c567711ab70)
+      ![image](https://github.com/leopoldocardoso/kubernetes/assets/89399291/521b63a4-37d0-4fa1-b05c-d82a890c4ac5)
+
 
