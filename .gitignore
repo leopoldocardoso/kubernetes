@@ -3,3 +3,4 @@ volume-emptyDir.yaml
 READMEold.md
 service.yamlold
 README.oldmd
+pvclaim.yaml
