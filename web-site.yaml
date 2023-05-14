@@ -34,6 +34,17 @@ spec:
               memory: 800Mi
               cpu: "0.9"
           env:
+            - name: nginx-username
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: myname
+            - name: nginx-pass
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: mypass
+          env:
             - name: Env-Nome
               valueFrom:
                 configMapKeyRef:
@@ -66,14 +77,3 @@ spec:
              command:
               - curl
               - http://localhost:80/
-          # secret:
-          # - name: Secret-User
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: mypassword
-          #       key: user
-          # - name: Secret-Pass
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: mypassword
-          #       key: pass
