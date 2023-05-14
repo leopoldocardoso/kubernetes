@@ -26,8 +26,8 @@ spec:
     spec:
       volumes:
         - name: pv-volume
-          persistentVolumeClaim:
-            claimName: pv-volume-claim
+          #persistentVolumeClaim:
+           # claimName: pv-volume-claim
       containers:
         - name: nginx
           image: nginx
