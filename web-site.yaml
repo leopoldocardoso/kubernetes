@@ -9,6 +9,11 @@ metadata:
     environment: dev
 spec:
   replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: # Estratégia de Update
+      maxSurge: 50% # maxSurge quantos pods serão atualizados
+      maxUnavailable: 50% # maxUnavailable quantos pods ficarão indisponíveis
   selector:
     matchLabels:
       run: site-nginx
